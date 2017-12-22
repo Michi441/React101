@@ -4,16 +4,18 @@ import React from 'react';
 
 const Header = (props) => {
   return(
-    <div>
-        <h1>{props.title}</h1>
-        {props.subtitle && <h2>{props.subtitle}</h2>}
+    <div className="header">
+        <div className="container">
 
+        <h1 className="header__title">{props.title}</h1>
+        {props.subtitle && <h2 className="header__subtitle">{props.subtitle}</h2>}
+      </div>
     </div>
   )
 }
 
 Header.defaultProps = {
-  title: 'some default, this demonstrates live injection by Header.defaultProps!'
+  title: 'IndecisionApp'
 };
 
 export default Header;
