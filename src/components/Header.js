@@ -1,21 +1,17 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
-const Header = (props) => {
-  return(
-    <div className="header">
-        <div className="container">
-
-        <h1 className="header__title">{props.title}</h1>
-        {props.subtitle && <h2 className="header__subtitle">{props.subtitle}</h2>}
-      </div>
-    </div>
-  )
-}
-
-Header.defaultProps = {
-  title: 'IndecisionApp'
-};
+const Header = () => (
+  <header>
+    <nav>
+    <h1>Expensify</h1>
+    <Link to="/create">Create Expense</Link>
+    <Link to="/edit">Edit Expense</Link>
+    <Link to="/help">Help Expense</Link>
+    </nav>
+  </header>
+)
 
 export default Header;
