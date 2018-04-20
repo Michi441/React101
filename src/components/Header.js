@@ -7,7 +7,7 @@ const Header = () => (
   <header>
     <nav>
     <h1>Expensify</h1>
-    <Link to="/create">Create Expense</Link>
+    <Link to="/create">Add Expense</Link>
     <Link to="/edit">Edit Expense</Link>
     <Link to="/help">Help Expense</Link>
     </nav>
