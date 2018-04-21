@@ -13,12 +13,19 @@ import getVisibleExpenses from './selectors/expenses'
 const store = configureStore();
 
 store.dispatch(addExpense({ description: 'Water Bill', amount: 4500}));
-store.dispatch(addExpense({ description: 'Gas Bill'}));
-store.dispatch(setTextFilter('water'));
+store.dispatch(addExpense({ description: 'Gas Bill', amount: 2500}));
+store.dispatch(addExpense({ description: 'Milk', amount: 9500}));
+
 
 setTimeout(() => {
   store.dispatch(setTextFilter('rent'));
 }, 3000)
+
+setTimeout(() => {
+  store.dispatch(setTextFilter('Milk'));
+}, 1500)
+
+store.dispatch(setTextFilter(''));
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
@@ -33,6 +40,5 @@ const jsx = (
 
 )
 
-console.log(store.getState());
-console.log("running");
+
 ReactDOM.render(jsx, document.getElementById('app'));
