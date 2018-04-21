@@ -1,7 +1,7 @@
 
 const expensesReducerDefaultState = [];
 
-const expensesReducer = (state = expensesReducerDefaultState, action) => {
+export default (state = expensesReducerDefaultState, action) => {
   switch(action.type){
     case 'ADD_EXPENSE':
       return[
@@ -9,7 +9,7 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
         action.expense
       ];
     case 'REMOVE_EXPENSE':
-    return state.filter(({ id }) => id !== action.id);
+      return state.filter(({ id }) => id !== action.id);
 
 
     case 'EDIT_EXPENSE':
@@ -29,5 +29,3 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
       return state;
   }
 };
-
-export default expensesReducer;

@@ -9,7 +9,7 @@ const filterReducerDefaultState = {
 
 
 
-const filtersReducer = (state = filterReducerDefaultState, action) => {
+export default  (state = filterReducerDefaultState, action) => {
   switch(action.type){
 
     case 'SET_TEXT_FILTER':
@@ -39,5 +39,3 @@ const filtersReducer = (state = filterReducerDefaultState, action) => {
       return state;
   }
 }
-
-export default filtersReducer;
